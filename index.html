@@ -19,153 +19,117 @@
     </nav>
 
     <header class="hero">
-        <h1>El Túnel</h1>
-        <p>...Creando nuevos mundos, historias y recuerdos</p>
+        <h1>...Creando nuevos mundos, historias y recuerdos</h1>
         <p>"Vivir consiste en construir futuros recuerdos"</p>
     </header>
 
     <main>
-        <!-- Sección de Recomendaciones -->
+        <!-- SECCIÓN RECOMENDACIONES -->
         <section id="recomendaciones">
-            <h2>Recomendaciones</h2>
+            <h2 class="titulo-seccion">Recomendaciones</h2>
             <div class="contenedor-grid">
                 <div class="libro-item">
                     <img src="assets/Harry Potter y la piedra filosofal.jpg" alt="Harry Potter">
                     <h3>Harry Potter y la piedra filosofal</h3>
-                    <p>J. K. Rowling</p>
-                    <a href="#" class="boton-enlace">Ver más</a>[cite: 2]
+                    <p class="autor">J. K. Rowling</p>
+                    <a href="#" class="btn-rojo">VER MÁS</a>
                 </div>
                 <div class="libro-item">
                     <img src="assets/Cien años de soledad.jpg" alt="Cien años de soledad">
                     <h3>Cien años de soledad</h3>
-                    <p>Gabriel García Márquez</p>
-                    <a href="#" class="boton-enlace">Ver más</a>[cite: 2]
+                    <p class="autor">Gabriel García Márquez</p>
+                    <a href="#" class="btn-rojo">VER MÁS</a>
                 </div>
                 <div class="libro-item">
-                    <img src="assets/La insoportable levedad del ser.jpg" alt="La insoportable levedad del ser">
+                    <img src="assets/La insoportable levedad del ser.jpg" alt="La insoportable levedad">
                     <h3>La insoportable levedad del ser</h3>
-                    <p>Milan Kundera</p>
-                    <a href="#" class="boton-enlace">Ver más</a>[cite: 2]
+                    <p class="autor">Milan Kundera</p>
+                    <a href="#" class="btn-rojo">VER MÁS</a>
                 </div>
                 <div class="libro-item">
                     <img src="assets/Como agua para chocolate.jpg" alt="Como agua para chocolate">
                     <h3>Como agua para chocolate</h3>
-                    <p>Laura Esquivel</p>
-                    <a href="#" class="boton-enlace">Ver más</a>[cite: 2]
+                    <p class="autor">Laura Esquivel</p>
+                    <a href="#" class="btn-rojo">VER MÁS</a>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Libros con Precios -->
+        <!-- SECCIÓN LIBROS (CON PRECIO Y COMPRAR EN LÍNEA) -->
         <section id="libros">
-            <h2>Libros</h2>
-            <div class="contenedor-grid">
+            <div class="cabecera-seccion">
+                <h2 class="titulo-seccion">Libros</h2>
+                <a href="#" class="ver-mas-general">Ver más</a>
+            </div>
+            <div class="contenedor-grid scroll-horizontal">
                 <div class="libro-item">
                     <img src="assets/Fuerte es el silencio.jpg" alt="Fuerte es el silencio">
                     <h3>Fuerte es el silencio</h3>
-                    <p>Elena Poniatowska</p>
-                    <p class="precio">$450.00</p>[cite: 2]
-                    <button class="boton-comprar">Comprar</button>[cite: 2]
+                    <p class="autor">Elena Poniatowska</p>
+                    <div class="precio-comprar">
+                        <span class="precio">$450.00</span>
+                        <button class="btn-rojo">COMPRAR</button>
+                    </div>
                 </div>
                 <div class="libro-item">
                     <img src="assets/Rayuela.jpg" alt="Rayuela">
                     <h3>Rayuela</h3>
-                    <p>Julio Cortázar</p>
-                    <p class="precio">$445.00</p>[cite: 2]
-                    <button class="boton-comprar">Comprar</button>[cite: 2]
+                    <p class="autor">Julio Cortázar</p>
+                    <div class="precio-comprar">
+                        <span class="precio">$445.00</span>
+                        <button class="btn-rojo">COMPRAR</button>
+                    </div>
                 </div>
                 <div class="libro-item">
                     <img src="assets/La ley de Herodes.jpg" alt="La ley de Herodes">
                     <h3>La ley de Herodes</h3>
-                    <p>Jorge Ibargüengoitia</p>
-                    <p class="precio">$150.00</p>[cite: 2]
-                    <button class="boton-comprar">Comprar</button>[cite: 2]
+                    <p class="autor">Jorge Ibargüengoitia</p>
+                    <div class="precio-comprar">
+                        <span class="precio">$150.00</span>
+                        <button class="btn-rojo">COMPRAR</button>
+                    </div>
                 </div>
                 <div class="libro-item">
                     <img src="assets/Arráncame la vida.jpg" alt="Arráncame la vida">
                     <h3>Arráncame la vida</h3>
-                    <p>Ángeles Mastretta</p>
-                    <p class="precio">$350.00</p>[cite: 2]
-                    <button class="boton-comprar">Comprar</button>[cite: 2]
+                    <p class="autor">Ángeles Mastretta</p>
+                    <div class="precio-comprar">
+                        <span class="precio">$350.00</span>
+                        <button class="btn-rojo">COMPRAR</button>
+                    </div>
                 </div>
                 <div class="libro-item">
                     <img src="assets/Una habitación propia.jpg" alt="Una habitación propia">
                     <h3>Una habitación propia</h3>
-                    <p>Virginia Woolf</p>
-                    <p class="precio">$240.00</p>[cite: 2]
-                    <button class="boton-comprar">Comprar</button>[cite: 2]
-                </div>
-                <div class="libro-item">
-                    <img src="assets/El doctor Zhivago.jpg" alt="El doctor Zhivago">
-                    <h3>El doctor Zhivago</h3>
-                    <p>Borís Pasternak</p>
-                    <p class="precio">$385.00</p>[cite: 2]
-                    <button class="boton-comprar">Comprar</button>[cite: 2]
-                </div>
-                <div class="libro-item">
-                    <img src="assets/Ana Karenina.jpg" alt="Ana Karenina">
-                    <h3>Ana Karenina</h3>
-                    <p>León Tolstói</p>
-                    <p class="precio">$350.00</p>[cite: 2]
-                    <button class="boton-comprar">Comprar</button>[cite: 2]
+                    <p class="autor">Virginia Woolf</p>
+                    <div class="precio-comprar">
+                        <span class="precio">$240.00</span>
+                        <button class="btn-rojo">COMPRAR</button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Biblioteca Gratuita (PDFs) -->
-        <section id="libros-gratuitos">
-            <h2>Biblioteca de Libros Gratuitos (PDF)</h2>
-            
+        <!-- SECCIÓN BIBLIOTECA GRATUITA (PDFS) -->
+        <section id="libros-gratuitos" style="padding: 20px;">
+            <h2 class="titulo-seccion">Biblioteca Gratuita (PDF)</h2>
             <h3>Ciencia Ficción</h3>
             <div class="contenedor-grid">
                 <div class="libro-item">
                     <p><strong>1984</strong></p>
-                    <p>George Orwell</p>
-                    <a href="libros/ciencia ficcion/1984-GEORGE ORWELL.pdf" target="_blank" class="boton-descarga">Leer PDF</a>
-                </div>
-                <div class="libro-item">
-                    <p><strong>Dune</strong></p>
-                    <p>Frank Herbert</p>
-                    <a href="libros/ciencia ficcion/Dune-Frank Herbert.pdf" target="_blank" class="boton-descarga">Leer PDF</a>
-                </div>
-            </div>
-
-            <h3>Fantasía</h3>
-            <div class="contenedor-grid">
-                <div class="libro-item">
-                    <p><strong>El Hobbit</strong></p>
-                    <p>J.R.R. Tolkien</p>
-                    <a href="libros/Fantasia/EL HOBBIT-J.R.R. TOLKIEN.pdf" target="_blank" class="boton-descarga">Leer PDF</a>
-                </div>
-            </div>
-
-            <h3>Romance</h3>
-            <div class="contenedor-grid">
-                <div class="libro-item">
-                    <p><strong>Orgullo y Prejuicio</strong></p>
-                    <p>Jane Austen</p>
-                    <a href="libros/romance/Orgullo y Prejuicio-JANE AUSTEN.pdf" target="_blank" class="boton-descarga">Leer PDF</a>
-                </div>
-            </div>
-
-            <h3>Terror</h3>
-            <div class="contenedor-grid">
-                <div class="libro-item">
-                    <p><strong>El Resplandor</strong></p>
-                    <p>Stephen King</p>
-                    <a href="libros/terror/El Resplandor-Stephen King.pdf" target="_blank" class="boton-descarga">Leer PDF</a>
+                    <p class="autor">George Orwell</p>
+                    <a href="libros/ciencia ficcion/1984-GEORGE ORWELL.pdf" target="_blank" class="btn-rojo">Leer PDF</a>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Conocenos -->
+        <!-- SECCIÓN CONOCENOS -->
         <section id="conocenos" class="contenedor-conocenos">
             <div class="texto-conocenos">
                 <h2>Conocenos</h2>
                 <p>El Túnel es una cafebrería ideal para los amantes de la literatura.</p>
-                <p>Además de su servicio de venta de libros y productos en línea puedes visitar nuestra sucursal y acompañar tu lectura con una taza de café o bebida de tu elección, o bien, disfrutar de los diversos eventos culturales que tenemos para ti.</p>
-                <p>Siguenos en redes sociales y mantente atento a la cartelera de eventos.</p>
-                <p><strong style="color: #8b0000;">¡Te esperamos!</strong></p>
+                <p>Además de su servicio de venta de libros y productos en línea puedes visitar nuestra sucursal y acompañar tu lectura con una taza de café o bebida de tu elección.</p>
+                <p><strong>¡Te esperamos!</strong></p>
             </div>
             <div class="imagen-conocenos">
                 <img src="assets/Imagen de libreria.jpg" alt="Sucursal El Túnel">
@@ -177,35 +141,8 @@
         <div class="footer-contenedor">
             <div class="footer-columna">
                 <h3>El Túnel</h3>
-                <p>Un espacio para los amantes de la literatura. Encuentra la mejor selección de libros, accesorios y un acogedor espacio en la CDMX para leer y tomar un café con tu libro favorito.</p>
-                <p>📍 Av. Álvaro Obregón 90, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX</p>
-                <p>📞 56 98 89 07 99 87</p>
-                <p>✉️ eltunel.libros@gmail.com</p>
+                <p>Un espacio para los amantes de la literatura en la CDMX.</p>
             </div>
-            <div class="footer-columna">
-                <h3>Información</h3>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Acerca de El Túnel</a></li>
-                    <li><a href="#">Tarjeta de cliente frecuente</a></li>
-                    <li><a href="#">Ventas por mayoreo</a></li>
-                    <li><a href="#">Facturación</a></li>
-                    <li><a href="#">Contáctanos</a></li>
-                    <li><a href="#">Aviso de privacidad</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
-                </ul>
-            </div>
-            <div class="footer-columna">
-                <h3>Suscríbete</h3>
-                <p>Regístrate para recibir noticias de promociones, eventos y actualizaciones.</p>
-                <form class="form-suscribe">
-                    <input type="email" placeholder="Ingresa tu email">
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>2026 © El Túnel. Todos los Derechos Reservados.</p>
         </div>
     </footer>
 </body>
