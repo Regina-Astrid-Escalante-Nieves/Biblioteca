@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!--  CABECERA, LOGO, BUSCADOR E ICONOS -->
+    <!--CABECERA, LOGO, BUSCADOR E ICONOS -->
     <header class="header-superior">
         <div class="logo-titulo">El Túnel</div>
         <div class="buscador-contenedor">
@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <!-- MENÚ DE NAVEGACIÓN  -->
+    <!-- MENÚ DE NAVEGACIÓN -->
     <nav class="menu">
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -42,7 +42,7 @@
         </ul>
     </nav>
 
-    <!-- BANNER CON IMAGEN DE TÚNEL DE LIBROS Y FRASE -->
+    <!-- BANNER  -->
     <div class="banner-portada">
         <img src="assets/portada.jpg" alt="Banner El Túnel">
         <div class="texto-banner">
@@ -52,45 +52,47 @@
     </div>
 
     <main>
-        <!--  RECOMENDACIONES -->
+        <!--  RECOMENDACIONES  -->
         <section id="recomendaciones" class="seccion-bloque">
             <h2 class="titulo-rojo">Recomendaciones</h2>
-            <div class="grid-libros">
-                <div class="libro-card">
-                    <img src="assets/Harry Potter y la piedra filosofal.jpg" alt="Harry Potter">
-                    <h3>Harry Potter y la piedra filosofal</h3>
-                    <p class="autor">J. K. Rowling</p>
-                    <a href="#" class="btn-rojo">VER MÁS</a>
-                </div>
-                <div class="libro-card">
-                    <img src="assets/Cien años de soledad.jpg" alt="Cien años de soledad">
-                    <h3>Cien años de soledad</h3>
-                    <p class="autor">Gabriel García Márquez</p>
-                    <a href="#" class="btn-rojo">VER MÁS</a>
-                </div>
-                <div class="libro-card">
-                    <img src="assets/La insoportable levedad del ser.jpg" alt="La insoportable levedad">
-                    <h3>La insoportable levedad del ser</h3>
-                    <p class="autor">Milan Kundera</p>
-                    <a href="#" class="btn-rojo">VER MÁS</a>
-                </div>
-                <div class="libro-card">
-                    <img src="assets/Como agua para chocolate.jpg" alt="Como agua para chocolate">
-                    <h3>Como agua para chocolate</h3>
-                    <p class="autor">Laura Esquivel</p>
-                    <a href="#" class="btn-rojo">VER MÁS</a>
+            <div class="contenedor-scroll-horizontal">
+                <div class="scroll-fila">
+                    <div class="libro-card">
+                        <img src="assets/Harry Potter y la piedra filosofal.jpg" alt="Harry Potter">
+                        <h3>Harry Potter y la piedra filosofal</h3>
+                        <p class="autor">J. K. Rowling</p>
+                        <a href="#" class="btn-rojo">VER MÁS</a>
+                    </div>
+                    <div class="libro-card">
+                        <img src="assets/Cien años de soledad.jpg" alt="Cien años de soledad">
+                        <h3>Cien años de soledad</h3>
+                        <p class="autor">Gabriel García Márquez</p>
+                        <a href="#" class="btn-rojo">VER MÁS</a>
+                    </div>
+                    <div class="libro-card">
+                        <img src="assets/La insoportable levedad del ser.jpg" alt="La insoportable levedad">
+                        <h3>La insoportable levedad del ser</h3>
+                        <p class="autor">Milan Kundera</p>
+                        <a href="#" class="btn-rojo">VER MÁS</a>
+                    </div>
+                    <div class="libro-card">
+                        <img src="assets/Como agua para chocolate.jpg" alt="Como agua para chocolate">
+                        <h3>Como agua para chocolate</h3>
+                        <p class="autor">Laura Esquivel</p>
+                        <a href="#" class="btn-rojo">VER MÁS</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- LIBROS (CON PRECIO, COMPRAR Y SCROLL HORIZONTAL) -->
+        <!-- LIBROS  -->
         <section id="libros-seccion" class="seccion-bloque">
             <div class="cabecera-libros">
                 <h2 class="titulo-rojo">Libros</h2>
                 <a href="#" class="enlace-ver-mas">Ver más</a>
             </div>
             <div class="contenedor-scroll-horizontal">
-                <div class="grid-libros scroll-fila">
+                <div class="scroll-fila">
                     <div class="libro-card">
                         <img src="assets/Fuerte es el silencio.jpg" alt="Fuerte es el silencio">
                         <h3>Fuerte es el silencio</h3>
@@ -140,20 +142,27 @@
             </div>
         </section>
 
-        <!-- LIBROS GRATUITOS EN PDF -->
-        <section id="libros-gratuitos" class="seccion-bloque" style="background: #faf8f5; padding: 20px; border-radius: 8px;">
+        <!-- BIBLIOTECA GRATUITA -->
+        <section id="libros-gratuitos" class="seccion-bloque">
             <h2 class="titulo-rojo">Biblioteca Gratuita (PDF)</h2>
-            <h3 style="margin-left: 20px; color: #444;">Ciencia Ficción</h3>
-            <div class="grid-libros">
-                <div class="libro-card">
-                    <p><strong>1984</strong></p>
-                    <p class="autor">George Orwell</p>
-                    <a href="libros/ciencia ficcion/1984-GEORGE ORWELL.pdf" target="_blank" class="btn-rojo">Leer PDF</a>
+            <h3 style="margin-left: 0; color: #444; font-size: 1rem;">Ciencia Ficción</h3>
+            <div class="contenedor-scroll-horizontal">
+                <div class="scroll-fila">
+                    <div class="libro-card">
+                        <p><strong>1984</strong></p>
+                        <p class="autor">George Orwell</p>
+                        <a href="libros/ciencia ficcion/1984-GEORGE ORWELL.pdf" target="_blank" class="btn-rojo">Leer PDF</a>
+                    </div>
+                    <div class="libro-card">
+                        <p><strong>Dune</strong></p>
+                        <p class="autor">Frank Herbert</p>
+                        <a href="libros/ciencia ficcion/Dune-Frank Herbert.pdf" target="_blank" class="btn-rojo">Leer PDF</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!--  CONÓCENOS Y SUCURSAL -->
+        <!--CONÓCENOS Y SUCURSAL -->
         <section id="conocenos" class="seccion-conocenos">
             <div class="texto-conocenos">
                 <h2 class="titulo-rojo" style="margin-left: 0;">Conocenos</h2>
@@ -168,7 +177,7 @@
         </section>
     </main>
 
-    <!--  PIE DE PÁGINA (FOOTER)  -->
+    <!-- PIE DE PÁGINA (FOOTER) -->
     <footer class="footer-principal">
         <div class="footer-contenedor">
             <div class="footer-columna">
