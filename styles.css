@@ -1,0 +1,88 @@
+/* 1. Estilos Globales */
+body {
+    background-color: #fcfaf5; 
+    color: #4a4a4a;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 2. Navegación (Menu) */
+.menu {
+    background-color: #d2b48c; 
+    padding: 1rem;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #3e2723; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* 3. Encabezado Hero */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4e8d3;
+}
+
+/* 4. Contenedor de Libros */
+.contenedor-libros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.libro-item {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.libro-item:hover {
+    transform: scale(1.05); /* Efecto al pasar el mouse */
+}
+
+.libro-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 5. Botones */
+.boton-descarga {
+    display: inline-block;
+    background-color: #8b0000; /* Rojo tipo editorial */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.boton-descarga:hover {
+    background-color: #a52a2a;
+}
+
+/* 6. Footer */
+footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
