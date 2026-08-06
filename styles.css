@@ -1,192 +1,111 @@
-/*ESTILOS GENERALES DE LA PÁGINA*/
-body {
-    background-color: #fcfaf5; 
-    color: #4a4a4a;          
-    font-family: Arial, sans-serif; 
-    margin: 0;         
+body { background-color: #ffffff; color: #333; font-family: Arial, sans-serif; margin: 0; }
+.menu { background-color: #d2b48c; padding: 1rem; }
+.menu ul { display: flex; justify-content: center; list-style: none; gap: 30px; margin: 0; padding: 0; }
+.menu a { text-decoration: none; color: #3e2723; font-weight: bold; }
+.hero { text-align: center; padding: 40px 20px; background-color: #f4e8d3; }
+
+/* Títulos de sección idénticos al documento */
+.titulo-seccion {
+    color: #8b0000;
+    font-size: 1.4rem;
+    margin-left: 40px;
+    margin-bottom: 10px;
 }
 
-/*  MENÚ DE NAVEGACIÓN SUPERIOR*/
-.menu {
-    background-color: #d2b48c; 
-    padding: 1rem;             
+.cabecera-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-right: 20px;
 }
 
-.menu ul {
-    display: flex;            
-    justify-content: center;  
-    list-style: none;        
-    gap: 30px;             
-    margin: 0;
-    padding: 0;
-}
-
-.menu a {
-    text-decoration: none;    
-    color: #3e2723;           
-    font-weight: bold;         
-
-/*  ENCABEZADO PRINCIPAL */
-.hero {
-    text-align: center;       
-    padding: 50px 20px;       
-    background-color: #f4e8d3; 
-}
-
-/* CONTENEDOR DE CUADRÍCULA (GRID) PARA LIBROS */
-.contenedor-grid {
-    display: grid;             
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-    gap: 20px;                
-    padding: 20px;
-    max-width: 1100px;        
-    margin: 0 auto;           
-}
-
-/* TARJETAS INDIVIDUALES DE LIBROS */
-.libro-item {
-    background: white;        
-    border: 1px solid #ddd;    
-    padding: 15px;            
-    text-align: center;        
-    border-radius: 5px;      
-}
-
-.libro-item img {
-    max-width: 100%;           
-    height: auto;             
-}
-
-/*  PRECIOS Y BOTONES (VER MÁS, COMPRAR, DESCARGAR) */
-.precio {
-    font-weight: bold;         
-    color: #8b0000;          
-    margin: 10px 0;
-}
-
-.boton-enlace {
-    display: inline-block;
-    color: #8b0000;            
+.ver-mas-general {
+    color: #8b0000;
     text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.boton-comprar {
-    background-color: #8b0000; 
-    color: white;              
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;           
-    border-radius: 4px;
-    margin-top: 5px;
-}
-
-.boton-comprar:hover {
-    background-color: #a52a2a; 
-}
-
-.boton-descarga {
-    background-color: #8b0000; 
-    color: white;
-    padding: 8px 12px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 4px;
     font-size: 0.9rem;
 }
 
-/*  SECCIÓN "CONÓCENOS" (DISTRIBUCIÓN EN 2 COLUMNAS) */
-.contenedor-conocenos {
-    display: flex;            
-    align-items: center;       
-    gap: 40px;                 
-    padding: 40px 20px;
+/* Cuadrícula de libros */
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.texto-conocenos {
-    flex: 1;                   
-}
-
-.imagen-conocenos {
-    flex: 1;                   
-}
-
-.imagen-conocenos img {
-    width: 100%;
-    border-radius: 8px;       
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-}
-
-/*  PIE DE PÁGINA (FOOTER) Y SUS COLUMNAS*/
-.footer-principal {
-    background-color: #bfa17e; 
-    padding: 40px 20px 10px 20px;
-    margin-top: 50px;
-    color: #2b2b2b;
-}
-
-.footer-contenedor {
-    display: flex;            
-    flex-wrap: wrap;           
-    justify-content: space-between; 
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 30px;
-}
-
-.footer-columna {
-    flex: 1;
-    min-width: 250px;         
-}
-
-.footer-columna h3 {
-    border-bottom: 1px solid rgba(0,0,0,0.1); 
-    padding-bottom: 5px;
-}
-
-.footer-columna ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;         
-}
-
-.footer-columna ul li a {
-    color: #2b2b2b;
-    text-decoration: none;
-}
-
-/*  FORMULARIO DE SUSCRIPCIÓN EN EL FOOTER */
-.form-suscribe {
-    display: flex;             
-    margin-top: 10px;
-}
-
-.form-suscribe input {
-    padding: 8px;
-    border: none;
-    flex: 1;                   
-    outline: none;
-    border-radius: 3px 0 0 3px; 
-}
-
-.form-suscribe button {
-    background-color: #8b4513; 
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 0 3px 3px 0; 
-}
-
-/*  BARRA INFERIOR DE DERECHOS DE AUTOR */
-.footer-bottom {
+.libro-item {
+    background: white;
+    padding: 10px;
     text-align: center;
-    border-top: 1px solid rgba(0,0,0,0.1); /
-    margin-top: 30px;
-    padding-top: 15px;
-    font-size: 0.8rem;         
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.libro-item img {
+    max-width: 140px;
+    height: 210px;
+    object-fit: cover;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.libro-item h3 {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #111;
+}
+
+.autor {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Botón rojo estilo editorial idéntico a la imagen */
+.btn-rojo {
+    background-color: #8b0000;
+    color: white;
+    padding: 6px 16px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-rojo:hover {
+    background-color: #a52a2a;
+}
+
+/* Alinear precio y botón comprar horizontalmente */
+.precio-comprar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 0 5px;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Sección Conócenos */
+.contenedor-conocenos { display: flex; align-items: center; gap: 40px; padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+.texto-conocenos { flex: 1; }
+.imagen-conocenos { flex: 1; }
+.imagen-conocenos img { width: 100%; border-radius: 8px; }
+
+/* Footer */
+.footer-principal { background-color: #bfa17e; padding: 30px; margin-top: 40px; color: #2b2b2b; }
+.footer-contenedor { max-width: 1100px; margin: 0 auto; }
