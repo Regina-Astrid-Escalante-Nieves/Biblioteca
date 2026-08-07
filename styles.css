@@ -1,4 +1,4 @@
-body { background-color: #ffffff; color: #333; font-family: Arial, sans-serif; margin: 0; }
+body { background-color: #ffffff; color: #333; font-family: Arial, sans-serif; margin: 0; overflow-x: hidden; }
 
 /* Header superior */
 .header-superior {
@@ -7,6 +7,8 @@ body { background-color: #ffffff; color: #333; font-family: Arial, sans-serif; m
     align-items: center;
     padding: 12px 50px;
     background-color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .logo-titulo {
@@ -65,8 +67,8 @@ body { background-color: #ffffff; color: #333; font-family: Arial, sans-serif; m
 }
 
 /* Menú de navegación */
-.menu { background-color: #bfa17e; padding: 0.6rem; }
-.menu ul { display: flex; justify-content: center; list-style: none; gap: 50px; margin: 0; padding: 0; }
+.menu { background-color: #bfa17e; padding: 0.6rem; width: 100%; box-sizing: border-box; }
+.menu ul { display: flex; justify-content: center; list-style: none; gap: 40px; margin: 0; padding: 0; }
 .menu a { text-decoration: none; color: #ffffff; font-weight: bold; font-size: 0.95rem; }
 
 /* Banner principal con imagen visible */
@@ -289,7 +291,7 @@ body { background-color: #ffffff; color: #333; font-family: Arial, sans-serif; m
     font-size: 0.75rem;
 }
 
-/* --- ESTILOS RESPONSIVOS PARA CELULARES (AGREGAR AL FINAL) --- */
+/* --- ADAPTACIÓN PARA CELULARES --- */
 @media (max-width: 768px) {
     .header-superior {
         flex-direction: column;
@@ -299,7 +301,8 @@ body { background-color: #ffffff; color: #333; font-family: Arial, sans-serif; m
     }
     
     .buscador-contenedor {
-        width: 90%;
+        width: 100%;
+        max-width: 280px;
         margin: 0 auto;
     }
 
