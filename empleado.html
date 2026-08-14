@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Empleado - El Túnel</title>
+    <style>
+        /* Estilos base (Mismos que el admin para mantener coherencia) */
+        body { margin: 0; font-family: Arial, sans-serif; display: flex; background-color: #f4f1ea; height: 100vh; }
+        
+        /* Menú lateral (Sidebar) */
+        .sidebar { width: 250px; background-color: #bfa17e; /* Color diferente al admin para diferenciar cuentas */ color: #333; display: flex; flex-direction: column; padding-top: 20px; border-right: 2px solid #a68a68; }
+        .sidebar-titulo { font-size: 1.8rem; font-weight: bold; font-family: Georgia, serif; font-style: italic; text-align: center; margin-bottom: 10px; color: #4a2e18; }
+        .sidebar-subtitulo { text-align: center; font-size: 0.85rem; color: #4a2e18; margin-bottom: 30px; font-weight: bold; }
+        .sidebar a { color: #333; text-decoration: none; padding: 15px 20px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: bold; transition: background 0.3s; }
+        .sidebar a:hover { background-color: #a68a68; color: white; }
+        .sidebar .salir { margin-top: auto; background-color: #8b0000; color: white; text-align: center; }
+        .sidebar .salir:hover { background-color: #700000; }
+
+        /* Área principal */
+        .contenido { flex: 1; padding: 30px; overflow-y: auto; }
+        .encabezado-seccion { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #4a2e18; padding-bottom: 10px; margin-bottom: 20px; }
+        .encabezado-seccion h2 { color: #4a2e18; margin: 0; }
+        .btn-accion { background-color: #8b0000; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        
+        /* Muro de Avisos */
+        .tarjeta-aviso { background: white; padding: 15px 20px; border-left: 5px solid #8b0000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 15px; }
+        .tarjeta-aviso h3 { margin: 0 0 10px 0; color: #333; font-size: 1.1rem; }
+        .tarjeta-aviso p { margin: 0 0 10px 0; color: #666; font-size: 0.95rem; line-height: 1.5; }
+        .fecha-aviso { font-size: 0.8rem; color: #999; font-style: italic; }
+
+        /* Tablas */
+        table { width: 100%; border-collapse: collapse; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #4a2e18; color: white; }
+        
+        /* Botones de tabla */
+        .btn-eliminar { background-color: #dc3545; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px; }
+        .btn-precio { background-color: #17a2b8; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 3px; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ LATERAL DEL EMPLEADO -->
+    <div class="sidebar">
+        <div class="sidebar-titulo">El Túnel</div>
+        <div class="sidebar-subtitulo">Portal de Empleados</div>
+        <a href="#muro">Muro de Publicaciones</a>
+        <a href="#inventario">Inventario de Libros</a>
+        <a href="login.html" class="salir">Cerrar Sesión</a>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenido">
+        
+        <!-- SECCIÓN: MURO DE PUBLICACIONES -->
+        <section id="muro">
+            <div class="encabezado-seccion">
+                <h2>Avisos de Administración</h2>
+            </div>
+            
+            <!-- Simulando los avisos que el Admin publicó en el Paso 2 -->
+            <div class="tarjeta-aviso">
+                <h3>Cambio de horario por día festivo</h3>
+                <p>Estimado equipo, les recordamos que este próximo lunes la sucursal operará en horario reducido de 10:00 AM a 4:00 PM. Por favor tomen sus precauciones.</p>
+                <span class="fecha-aviso">Publicado: 14 de Agosto, 2026 por Administración</span>
+            </div>
+
+            <div class="tarjeta-aviso">
+                <h3>Nuevo lote de libros de ciencia ficción</h3>
+                <p>Ha llegado mercancía nueva para la sección de Ciencia Ficción. Favor de darlos de alta en el sistema y acomodarlos en los estantes principales antes del fin de semana.</p>
+                <span class="fecha-aviso">Publicado: 10 de Agosto, 2026 por Administración</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: INVENTARIO DE LIBROS -->
+        <section id="inventario" style="margin-top: 50px;">
+            <div class="encabezado-seccion">
+                <h2>Inventario y Precios</h2>
+                <!-- Botón para simular agregar libros como pediste -->
+                <button class="btn-accion">+ Añadir Libro al Catálogo</button> 
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Precio Actual</th>
+                        <th>Acciones Permitidas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Simulación con libros reales de tu index.html -->
+                    <tr>
+                        <td>L-101</td>
+                        <td>Cien años de soledad</td>
+                        <td>Gabriel García Márquez</td>
+                        <td>$350.00</td>
+                        <td>
+                            <button class="btn-precio">Cambiar Precio</button>
+                            <button class="btn-eliminar">Eliminar Libro</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>L-102</td>
+                        <td>Fuerte es el silencio</td>
+                        <td>Elena Poniatowska</td>
+                        <td>$450.00</td>
+                        <td>
+                            <button class="btn-precio">Cambiar Precio</button>
+                            <button class="btn-eliminar">Eliminar Libro</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>L-103</td>
+                        <td>Dune</td>
+                        <td>Frank Herbert</td>
+                        <td>Gratuito (PDF)</td>
+                        <td>
+                            <button class="btn-precio" disabled style="background-color: #ccc; cursor: not-allowed;">Cambiar Precio</button>
+                            <button class="btn-eliminar">Eliminar Libro</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+</body>
+</html>
