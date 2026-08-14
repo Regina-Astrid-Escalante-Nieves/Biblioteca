@@ -3,87 +3,94 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso Intranet - El Túnel</title>
+    <title>Acceso - El Túnel</title>
     <style>
-        body {
-            background-color: #f4f1ea;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #f4f1ea; 
+            margin: 0; 
         }
-        .login-container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-            border-top: 5px solid #8b0000; /* Color vino de El Túnel */
+        .login-box { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            width: 300px; 
+            text-align: center; 
+            border-top: 5px solid #8b0000; 
         }
-        .logo-titulo {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #4a2e18;
-            font-family: Georgia, serif;
-            font-style: italic;
-            margin-bottom: 10px;
+        .logo-titulo { 
+            font-size: 2rem; 
+            font-weight: bold; 
+            color: #4a2e18; 
+            font-family: Georgia, serif; 
+            font-style: italic; 
+            margin-bottom: 20px; 
         }
-        .subtitulo {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 0.95rem;
+        input { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            box-sizing: border-box; 
         }
-        /* Botones de roles */
-        .btn-rol {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            color: white;
-            box-sizing: border-box;
-            transition: background-color 0.3s;
+        button { 
+            width: 100%; 
+            padding: 10px; 
+            background-color: #4a2e18; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: bold; 
         }
-        .btn-admin { background-color: #4a2e18; }
-        .btn-admin:hover { background-color: #311e10; }
-        
-        .btn-empleado { background-color: #bfa17e; }
-        .btn-empleado:hover { background-color: #a68a68; }
-        
-        .btn-cliente { background-color: #8b0000; }
-        .btn-cliente:hover { background-color: #700000; }
-        
-        .btn-volver {
-            display: inline-block;
-            margin-top: 15px;
-            color: #8b0000;
-            text-decoration: none;
-            font-size: 0.85rem;
+        button:hover { 
+            background-color: #2e1c0e; 
         }
-        .btn-volver:hover { text-decoration: underline; }
+        .volver { 
+            margin-top: 15px; 
+            display: block; 
+            color: #8b0000; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+        }
+        .volver:hover { 
+            text-decoration: underline; 
+        }
     </style>
 </head>
 <body>
-    <div class="login-container">
+
+    <div class="login-box">
         <div class="logo-titulo">El Túnel</div>
-        <div class="subtitulo">Portal de Intranet y Clientes</div>
-        
-        <!-- Simulación de login -->
-        <a href="admin.html" class="btn-rol btn-admin">Entrar como Administrador</a>
-        <a href="empleado.html" class="btn-rol btn-empleado">Entrar como Empleado</a>
-        <a href="cliente.html" class="btn-rol btn-cliente">Entrar como Cliente Frecuente</a>
-        
-        <!-- Regreso a la página pública -->
-        <a href="index.html" class="btn-volver">← Volver a la página principal</a>
+        <h3>Iniciar Sesión</h3>
+        <input type="text" id="usuario" placeholder="Usuario">
+        <input type="password" id="pass" placeholder="Contraseña">
+        <button onclick="verificarLogin()">Entrar</button>
+        <a href="index.html" class="volver">← Volver a la página principal</a>
     </div>
+
+    <script>
+        function verificarLogin() {
+            let u = document.getElementById("usuario").value;
+            let p = document.getElementById("pass").value;
+
+            // Validación de usuarios, roles y contraseña 
+            if (u === "Astro1" && p === "biblioteca123") {
+                window.location.href = "admin.html";
+            } else if (u === "Astro9" && p === "biblioteca123") {
+                window.location.href = "empleado.html";
+            } else if (u === "Astro99" && p === "biblioteca123") {
+                window.location.href = "cliente.html";
+            } else {
+                alert("Contraseña o usuario incorrecto");
+            }
+        }
+    </script>
 </body>
 </html>
