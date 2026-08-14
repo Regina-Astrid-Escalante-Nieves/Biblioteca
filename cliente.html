@@ -19,8 +19,21 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .logo-titulo { font-size: 1.8rem; font-weight: bold; font-family: Georgia, serif; font-style: italic; color: #bfa17e; margin: 0; }
-        .btn-salir { color: white; text-decoration: none; font-size: 0.9rem; border: 1px solid #bfa17e; padding: 5px 15px; border-radius: 4px; transition: background 0.3s; }
-        .btn-salir:hover { background-color: #bfa17e; color: #4a2e18; }
+        
+        .acciones-header { display: flex; gap: 10px; align-items: center; }
+        
+        .btn-header { 
+            color: white; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            border: 1px solid #bfa17e; 
+            padding: 5px 15px; 
+            border-radius: 4px; 
+            transition: background 0.3s; 
+        }
+        .btn-header:hover { background-color: #bfa17e; color: #4a2e18; }
+        .btn-salir { background-color: #8b0000; border-color: #8b0000; }
+        .btn-salir:hover { background-color: #a52a2a; color: white; }
         
         /* Contenedor principal */
         .contenedor { max-width: 900px; margin: 40px auto; padding: 0 20px; }
@@ -45,7 +58,7 @@
         /* Diseño visual del Cupón (Estilo Ticket) */
         .cupon { 
             background: linear-gradient(135deg, #ffffff, #fdfbf7); 
-            border: 2px dashed #bfa17e; /* Borde punteado */
+            border: 2px dashed #bfa17e; 
             border-radius: 10px; 
             padding: 25px 20px; 
             display: flex; 
@@ -57,13 +70,12 @@
             position: relative; 
         }
         
-        /* Efecto de semicírculos a los lados para parecer un boleto */
         .cupon::before, .cupon::after { 
             content: ''; 
             position: absolute; 
             width: 25px; 
             height: 25px; 
-            background-color: #f4f1ea; /* Mismo color del fondo de la página */
+            background-color: #f4f1ea; 
             border-radius: 50%; 
             top: 50%; 
             transform: translateY(-50%); 
@@ -107,8 +119,12 @@
     <!-- BARRA SUPERIOR -->
     <header class="header-cliente">
         <h2 class="logo-titulo">El Túnel</h2>
-        <!-- El botón cerrar sesión nos regresa al login simulado -->
-        <a href="login.html" class="btn-salir">Cerrar Sesión</a>
+        <div class="acciones-header">
+            <!-- Botón de Página Principal -->
+            <a href="index.html" class="btn-header">Página Principal</a>
+            <!-- Botón de Cerrar Sesión -->
+            <a href="login.html" class="btn-header btn-salir">Cerrar Sesión</a>
+        </div>
     </header>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -146,7 +162,7 @@
             </div>
         </div>
 
-        <!-- BOTÓN PARA REGRESAR A PÁGINA PRINCIPAL -->
+        <!-- BOTÓN PARA REGRESAR A TU PÁGINA PRINCIPAL  -->
         <a href="index.html" class="btn-tienda">Ir a la tienda a comprar</a>
 
     </div>
