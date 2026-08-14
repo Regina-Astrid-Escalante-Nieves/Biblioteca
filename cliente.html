@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - El Túnel</title>
+    <style>
+        /* Estilos generales */
+        body { margin: 0; font-family: Arial, sans-serif; background-color: #f4f1ea; color: #333; }
+        
+        /* Barra de navegación superior */
+        .header-cliente { 
+            background-color: #4a2e18; 
+            color: white; 
+            padding: 15px 50px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo-titulo { font-size: 1.8rem; font-weight: bold; font-family: Georgia, serif; font-style: italic; color: #bfa17e; margin: 0; }
+        .btn-salir { color: white; text-decoration: none; font-size: 0.9rem; border: 1px solid #bfa17e; padding: 5px 15px; border-radius: 4px; transition: background 0.3s; }
+        .btn-salir:hover { background-color: #bfa17e; color: #4a2e18; }
+        
+        /* Contenedor principal */
+        .contenedor { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Tarjeta de bienvenida */
+        .bienvenida { 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+            text-align: center; 
+            margin-bottom: 40px; 
+            border-top: 5px solid #8b0000; 
+        }
+        .bienvenida h1 { color: #8b0000; margin-top: 0; }
+        .bienvenida p { color: #666; font-size: 1.1rem; }
+        
+        /* Sección de Cupones */
+        .titulo-seccion { color: #4a2e18; border-bottom: 2px solid #bfa17e; padding-bottom: 10px; margin-bottom: 25px; }
+        .grid-cupones { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        /* Diseño visual del Cupón (Estilo Ticket) */
+        .cupon { 
+            background: linear-gradient(135deg, #ffffff, #fdfbf7); 
+            border: 2px dashed #bfa17e; /* Borde punteado */
+            border-radius: 10px; 
+            padding: 25px 20px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            position: relative; 
+        }
+        
+        /* Efecto de semicírculos a los lados para parecer un boleto */
+        .cupon::before, .cupon::after { 
+            content: ''; 
+            position: absolute; 
+            width: 25px; 
+            height: 25px; 
+            background-color: #f4f1ea; /* Mismo color del fondo de la página */
+            border-radius: 50%; 
+            top: 50%; 
+            transform: translateY(-50%); 
+        }
+        .cupon::before { left: -14px; border-right: 2px solid #bfa17e; }
+        .cupon::after { right: -14px; border-left: 2px solid #bfa17e; }
+        
+        .cupon-descuento { font-size: 2.2rem; font-weight: bold; color: #8b0000; margin: 0 0 10px 0; }
+        .cupon-desc { color: #555; font-size: 0.95rem; margin-bottom: 20px; }
+        .cupon-codigo { 
+            background-color: #f4f1ea; 
+            padding: 10px 20px; 
+            border-radius: 4px; 
+            font-family: monospace; 
+            font-size: 1.3rem; 
+            font-weight: bold; 
+            color: #4a2e18; 
+            letter-spacing: 2px; 
+            border: 1px solid #ddd;
+        }
+
+        /* Botón para regresar a comprar */
+        .btn-tienda { 
+            display: block; 
+            width: 220px; 
+            margin: 40px auto 0; 
+            text-align: center; 
+            background-color: #8b0000; 
+            color: white; 
+            padding: 15px 20px; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-weight: bold; 
+            transition: background 0.3s; 
+        }
+        .btn-tienda:hover { background-color: #a52a2a; }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="header-cliente">
+        <h2 class="logo-titulo">El Túnel</h2>
+        <!-- El botón cerrar sesión nos regresa al login simulado -->
+        <a href="login.html" class="btn-salir">Cerrar Sesión</a>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenedor">
+        
+        <!-- TARJETA DE BIENVENIDA -->
+        <div class="bienvenida">
+            <h1>¡Hola de nuevo, Lector Frecuente!</h1>
+            <p>Gracias por ser parte de la comunidad de El Túnel. Aquí tienes tus recompensas exclusivas.</p>
+        </div>
+
+        <!-- SECCIÓN DE CUPONES -->
+        <h2 class="titulo-seccion">Mis Cupones Disponibles</h2>
+        
+        <div class="grid-cupones">
+            <!-- Cupón 1 -->
+            <div class="cupon">
+                <h3 class="cupon-descuento">20% OFF</h3>
+                <p class="cupon-desc">En toda la sección de Ciencia Ficción y Fantasía. Válido hasta fin de mes.</p>
+                <div class="cupon-codigo">FANTASIA20</div>
+            </div>
+
+            <!-- Cupón 2 -->
+            <div class="cupon">
+                <h3 class="cupon-descuento">Café Gratis</h3>
+                <p class="cupon-desc">En la compra de cualquier libro físico en nuestra sucursal de Roma Nte.</p>
+                <div class="cupon-codigo">CAFETUNEL</div>
+            </div>
+            
+            <!-- Cupón 3 -->
+            <div class="cupon">
+                <h3 class="cupon-descuento">Envío Gratis</h3>
+                <p class="cupon-desc">Aplicable en compras mayores a $500.00 MXN en nuestra tienda en línea.</p>
+                <div class="cupon-codigo">ENVIOZERO</div>
+            </div>
+        </div>
+
+        <!-- BOTÓN PARA REGRESAR A PÁGINA PRINCIPAL -->
+        <a href="index.html" class="btn-tienda">Ir a la tienda a comprar</a>
+
+    </div>
+
+</body>
+</html>
