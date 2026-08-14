@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Intranet - El Túnel</title>
+    <style>
+        body {
+            background-color: #f4f1ea;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            border-top: 5px solid #8b0000; /* Color vino de El Túnel */
+        }
+        .logo-titulo {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #4a2e18;
+            font-family: Georgia, serif;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .subtitulo {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        /* Botones de roles */
+        .btn-rol {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
+        }
+        .btn-admin { background-color: #4a2e18; }
+        .btn-admin:hover { background-color: #311e10; }
+        
+        .btn-empleado { background-color: #bfa17e; }
+        .btn-empleado:hover { background-color: #a68a68; }
+        
+        .btn-cliente { background-color: #8b0000; }
+        .btn-cliente:hover { background-color: #700000; }
+        
+        .btn-volver {
+            display: inline-block;
+            margin-top: 15px;
+            color: #8b0000;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .btn-volver:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-titulo">El Túnel</div>
+        <div class="subtitulo">Portal de Intranet y Clientes</div>
+        
+        <!-- Simulación de login -->
+        <a href="admin.html" class="btn-rol btn-admin">Entrar como Administrador</a>
+        <a href="empleado.html" class="btn-rol btn-empleado">Entrar como Empleado</a>
+        <a href="cliente.html" class="btn-rol btn-cliente">Entrar como Cliente Frecuente</a>
+        
+        <!-- Regreso a la página pública -->
+        <a href="index.html" class="btn-volver">← Volver a la página principal</a>
+    </div>
+</body>
+</html>
