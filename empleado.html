@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Empleado - El Túnel</title>
     <style>
-        /* Estilos base (Mismos que el admin para mantener coherencia) */
+        /* Estilos base */
         body { margin: 0; font-family: Arial, sans-serif; display: flex; background-color: #f4f1ea; height: 100vh; }
         
         /* Menú lateral (Sidebar) */
-        .sidebar { width: 250px; background-color: #bfa17e; /* Color diferente al admin para diferenciar cuentas */ color: #333; display: flex; flex-direction: column; padding-top: 20px; border-right: 2px solid #a68a68; }
+        .sidebar { width: 250px; background-color: #bfa17e; color: #333; display: flex; flex-direction: column; padding-top: 20px; border-right: 2px solid #a68a68; }
         .sidebar-titulo { font-size: 1.8rem; font-weight: bold; font-family: Georgia, serif; font-style: italic; text-align: center; margin-bottom: 10px; color: #4a2e18; }
         .sidebar-subtitulo { text-align: center; font-size: 0.85rem; color: #4a2e18; margin-bottom: 30px; font-weight: bold; }
         .sidebar a { color: #333; text-decoration: none; padding: 15px 20px; display: block; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: bold; transition: background 0.3s; }
         .sidebar a:hover { background-color: #a68a68; color: white; }
+        
+        /* Botón de Página Principal */
+        .sidebar .btn-inicio { background-color: #4a2e18; color: white; text-align: center; }
+        .sidebar .btn-inicio:hover { background-color: #2e1c0e; }
+
         .sidebar .salir { margin-top: auto; background-color: #8b0000; color: white; text-align: center; }
         .sidebar .salir:hover { background-color: #700000; }
 
@@ -47,6 +52,10 @@
         <div class="sidebar-subtitulo">Portal de Empleados</div>
         <a href="#muro">Muro de Publicaciones</a>
         <a href="#inventario">Inventario de Libros</a>
+        
+        <!-- Botón para regresar a pagina principal -->
+        <a href="index.html" class="btn-inicio">Página Principal</a>
+        
         <a href="login.html" class="salir">Cerrar Sesión</a>
     </div>
 
@@ -59,7 +68,6 @@
                 <h2>Avisos de Administración</h2>
             </div>
             
-            <!-- Simulando los avisos que el Admin publicó en el Paso 2 -->
             <div class="tarjeta-aviso">
                 <h3>Cambio de horario por día festivo</h3>
                 <p>Estimado equipo, les recordamos que este próximo lunes la sucursal operará en horario reducido de 10:00 AM a 4:00 PM. Por favor tomen sus precauciones.</p>
@@ -77,7 +85,6 @@
         <section id="inventario" style="margin-top: 50px;">
             <div class="encabezado-seccion">
                 <h2>Inventario y Precios</h2>
-                <!-- Botón para simular agregar libros como pediste -->
                 <button class="btn-accion">+ Añadir Libro al Catálogo</button> 
             </div>
             <table>
@@ -91,7 +98,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Simulación con libros reales de tu index.html -->
                     <tr>
                         <td>L-101</td>
                         <td>Cien años de soledad</td>
