@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administrador - El Túnel</title>
     <style>
-        /* Estilos generales del Dashboard */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             display: flex;
-            background-color: #f4f1ea; /* Fondo claro */
+            background-color: #f4f1ea;
             height: 100vh;
         }
 
         /* Menú lateral (Sidebar) */
         .sidebar {
             width: 250px;
-            background-color: #4a2e18; /* Café oscuro */
+            background-color: #4a2e18;
             color: white;
             display: flex;
             flex-direction: column;
@@ -30,8 +29,15 @@
             font-family: Georgia, serif;
             font-style: italic;
             text-align: center;
+            margin-bottom: 5px;
+            color: #bfa17e;
+        }
+
+        .sidebar-subtitulo {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #bfa17e;
             margin-bottom: 30px;
-            color: #bfa17e; /* Tono arena */
         }
 
         .sidebar a {
@@ -44,7 +50,7 @@
         }
 
         .sidebar a:hover {
-            background-color: #8b0000; /* Rojo vino */
+            background-color: #8b0000;
         }
 
         .sidebar .salir {
@@ -107,7 +113,6 @@
             color: white;
         }
 
-        /* Botones pequeños dentro de las tablas */
         .btn-eliminar {
             background-color: #dc3545;
             color: white;
@@ -127,7 +132,7 @@
             margin-right: 5px;
         }
 
-        /* Formularios */
+        /* Formularios simulados */
         .caja-formulario {
             background: white;
             padding: 20px;
@@ -152,10 +157,15 @@
     <!-- MENÚ LATERAL -->
     <div class="sidebar">
         <div class="sidebar-titulo">El Túnel</div>
+        <div class="sidebar-subtitulo">Panel Administrador</div>
         <a href="#empleados">Gestión de Empleados</a>
         <a href="#libros">Gestión de Libros</a>
         <a href="#avisos">Muro de Publicaciones</a>
         <a href="#cupones">Cupones para Clientes</a>
+        
+        <!-- Botón para regresar a pagina principal -->
+        <a href="index.html" style="background-color: #311e10; text-align: center; font-weight: bold;">Página Principal</a>
+        
         <a href="login.html" class="salir">Cerrar Sesión</a>
     </div>
 
