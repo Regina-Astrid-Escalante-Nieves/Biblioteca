@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador - El Túnel</title>
+    <style>
+        /* Estilos generales del Dashboard */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #f4f1ea; /* Fondo claro */
+            height: 100vh;
+        }
+
+        /* Menú lateral (Sidebar) */
+        .sidebar {
+            width: 250px;
+            background-color: #4a2e18; /* Café oscuro */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+        
+        .sidebar-titulo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #bfa17e; /* Tono arena */
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #8b0000; /* Rojo vino */
+        }
+
+        .sidebar .salir {
+            margin-top: auto;
+            background-color: #8b0000;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Área de contenido principal */
+        .contenido {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .encabezado-seccion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #bfa17e;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .encabezado-seccion h2 {
+            color: #8b0000;
+            margin: 0;
+        }
+
+        .btn-accion {
+            background-color: #8b0000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .btn-accion:hover { background-color: #a52a2a; }
+
+        /* Estilo de las Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #bfa17e;
+            color: white;
+        }
+
+        /* Botones pequeños dentro de las tablas */
+        .btn-eliminar {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        .btn-editar {
+            background-color: #ffc107;
+            color: #333;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
+
+        /* Formularios */
+        .caja-formulario {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            border-left: 4px solid #4a2e18;
+        }
+
+        .caja-formulario input, .caja-formulario textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MENÚ LATERAL -->
+    <div class="sidebar">
+        <div class="sidebar-titulo">El Túnel</div>
+        <a href="#empleados">Gestión de Empleados</a>
+        <a href="#libros">Gestión de Libros</a>
+        <a href="#avisos">Muro de Publicaciones</a>
+        <a href="#cupones">Cupones para Clientes</a>
+        <a href="login.html" class="salir">Cerrar Sesión</a>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="contenido">
+        
+        <!-- SECCIÓN: EMPLEADOS -->
+        <section id="empleados">
+            <div class="encabezado-seccion">
+                <h2>Gestión de Empleados</h2>
+                <button class="btn-accion">+ Añadir Empleado</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Puesto</th>
+                        <th>Turno</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Carlos Mendoza</td>
+                        <td>Bibliotecario</td>
+                        <td>Matutino</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Ana Sofia Ríos</td>
+                        <td>Cajera / Atención</td>
+                        <td>Vespertino</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECCIÓN: LIBROS -->
+        <section id="libros">
+            <div class="encabezado-seccion">
+                <h2>Inventario de Libros</h2>
+                <button class="btn-accion">+ Añadir Libro</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>L-105</td>
+                        <td>Rayuela</td>
+                        <td>Julio Cortázar</td>
+                        <td>$445.00</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>L-106</td>
+                        <td>1984</td>
+                        <td>George Orwell</td>
+                        <td>Gratuito (PDF)</td>
+                        <td>
+                            <button class="btn-editar">Editar</button>
+                            <button class="btn-eliminar">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECCIÓN: MURO DE PUBLICACIONES -->
+        <section id="avisos">
+            <div class="encabezado-seccion">
+                <h2>Publicar en el Muro (Solo Empleados)</h2>
+            </div>
+            <div class="caja-formulario">
+                <input type="text" placeholder="Título del aviso (Ej. Cambio de horario por día festivo)">
+                <textarea rows="4" placeholder="Escribe el contenido del mensaje aquí..."></textarea>
+                <button class="btn-accion">Publicar Aviso</button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CUPONES -->
+        <section id="cupones">
+            <div class="encabezado-seccion">
+                <h2>Generador de Cupones (Para Clientes)</h2>
+            </div>
+            <div class="caja-formulario">
+                <input type="text" placeholder="Código del cupón (Ej. LECTURA20)">
+                <input type="text" placeholder="Descripción (Ej. 20% de descuento en novelas de terror)">
+                <button class="btn-accion">Publicar Cupón</button>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
